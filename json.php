@@ -53,10 +53,16 @@ while($row = mysqli_fetch_array($result)){
 	if ($dialed[0]=='*') {
 		continue;
 	}
-	$client=mysqli_query($dbconfig,"SELECT CONCAT_WS(' ',first_name,last_name) as name from vicidial_list where lead_id='".$dialed_id."' ");
+	$client=mysqli_query($dbconfig,"SELECT first_name,last_name from vicidial_list where lead_id='".$dialed_id."' ");
 	$client=mysqli_fetch_array($client);
-	if ($client[0]!='') {
-		$client_name=$client[0];
+	if ($client[0]==$client[1]) {
+		$c_name=$client[0];
+	}else{
+		$c_name=$client[0]." ".$client[1];
+	}
+
+	if ($c_name!='') {
+		$client_name=$c_name;
 	}else{
 		$client_name=$dialed_id;
 	}
@@ -71,7 +77,6 @@ while($row = mysqli_fetch_array($result)){
 		}	
 	}				
 }	
-
 echo json_encode($jsonOutput);
 return;
 ?>
