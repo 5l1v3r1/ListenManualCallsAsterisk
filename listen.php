@@ -10,6 +10,7 @@
 		.hero-widget { text-align: center; padding-top: 10px; padding-bottom: 10px;height: 200px;}
 		.hero-widget .icon { display: block; font-size: 36px; line-height: 36px; margin-bottom: 10px; text-align: center; }
 		.container0{margin-top:15px;}
+		.name{font-stretch: condensed;}
 		</style>
 	</head>
 <progress value="0" max="10" id="progressBar"></progress>
@@ -80,7 +81,7 @@
 	};
 
 	getData();
-	setInterval(getData, 10000);
+	//setInterval(getData, 10000);
 	function convertMS(ms) {
 	    var d, h, m, s;
 	    s = Math.floor(ms / 1000);
