@@ -47,7 +47,6 @@
 	}
 
 	function parseJson(item,index){
-		//item=item.sort(function(a,b){return a[3] < b[3]})
 		var dateNow = new Date();
 		
 		if (item[3]!='') {
@@ -81,7 +80,7 @@
 	};
 
 	getData();
-	//setInterval(getData, 10000);
+	setInterval(getData, 10000);
 	function convertMS(ms) {
 	    var d, h, m, s;
 	    s = Math.floor(ms / 1000);
