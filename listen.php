@@ -1,4 +1,4 @@
-<html>
+<html >
 	<head>
 	  	<title>CRM Listen</title>
 	 	<meta charset="utf-8">
@@ -7,13 +7,14 @@
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	 	<style>
-		.hero-widget { text-align: center; padding-top: 10px; padding-bottom: 10px;height: 200px;}
+		.hero-widget { text-align: center; padding-top: 5px; padding-bottom: 10px;height: 200px;}
 		.hero-widget .icon { display: block; font-size: 36px; line-height: 36px; margin-bottom: 10px; text-align: center; }
 		.container0{margin-top:15px;}
 		.name{font-stretch: condensed;}
+		body{background:#333333e8}
 		</style>
 	</head>
-<progress value="0" max="10" id="progressBar"></progress>
+<progress style="width: 100%" value="0" max="10" id="progressBar"></progress>
 <div class="container0"></div>
 
 <script type="text/javascript">
@@ -69,7 +70,7 @@
 									</br>
 									<span>${item[4]}</span>
 									</br></br>
-									<span style="font-size:smaller;color:blue">${duration}</span>
+									<span style="font-size:larger;color:#337ab7">${duration}</span>
 								</label>
 							</div>
 						</div>
